@@ -1,0 +1,912 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="http://jacobrask.github.com/styledocco/">styledocco (v0.6.6)</a>
+</h1>
+<h4>Generate documentation and style guides with design patterns from stylesheets.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.styledocco">module styledocco</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.styledocco.styledocco">
+            function <span class="apidocSignatureSpan"></span>styledocco
+            <span class="apidocSignatureSpan">(css)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.styledocco.cli">
+            function <span class="apidocSignatureSpan">styledocco.</span>cli
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.styledocco.makeSections">
+            function <span class="apidocSignatureSpan">styledocco.</span>makeSections
+            <span class="apidocSignatureSpan">(blocks)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.styledocco.separate">
+            function <span class="apidocSignatureSpan">styledocco.</span>separate
+            <span class="apidocSignatureSpan">(css)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.styledocco.cli">module styledocco.cli</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.styledocco.cli.cli">
+            function <span class="apidocSignatureSpan">styledocco.</span>cli
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.styledocco.cli.getFiles">
+            function <span class="apidocSignatureSpan">styledocco.cli.</span>getFiles
+            <span class="apidocSignatureSpan">(inPath, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.styledocco.cli.htmlFilename">
+            function <span class="apidocSignatureSpan">styledocco.cli.</span>htmlFilename
+            <span class="apidocSignatureSpan">(file, basePath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.styledocco.cli.menuLinks">
+            function <span class="apidocSignatureSpan">styledocco.cli.</span>menuLinks
+            <span class="apidocSignatureSpan">(files, basePath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.styledocco.cli.preprocess">
+            function <span class="apidocSignatureSpan">styledocco.cli.</span>preprocess
+            <span class="apidocSignatureSpan">(file, pp, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.styledocco.cli.urlsRelative">
+            function <span class="apidocSignatureSpan">styledocco.cli.</span>urlsRelative
+            <span class="apidocSignatureSpan">(css, path)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.styledocco.styledocco">module styledocco.styledocco</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.styledocco.styledocco.styledocco">
+            function <span class="apidocSignatureSpan">styledocco.</span>styledocco
+            <span class="apidocSignatureSpan">(css)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.styledocco.styledocco.makeSections">
+            function <span class="apidocSignatureSpan">styledocco.styledocco.</span>makeSections
+            <span class="apidocSignatureSpan">(blocks)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.styledocco.styledocco.separate">
+            function <span class="apidocSignatureSpan">styledocco.styledocco.</span>separate
+            <span class="apidocSignatureSpan">(css)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.styledocco" id="apidoc.module.styledocco">module styledocco</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.styledocco.styledocco" id="apidoc.element.styledocco.styledocco">
+        function <span class="apidocSignatureSpan"></span>styledocco
+        <span class="apidocSignatureSpan">(css)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">styledocco = function (css) {
+  return makeSections(separate(css));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.styledocco.cli" id="apidoc.element.styledocco.cli">
+        function <span class="apidocSignatureSpan">styledocco.</span>cli
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cli = function (options) {
+
+  var errorMessages = { noFiles: 'No css files found' };
+  var resourcesDir = __dirname + '/share/';
+
+  // Filetypes and matching preprocessor binaries.
+  var fileTypes = {
+    '.css': null,
+    '.sass': 'sass',
+    '.scss': 'scss',
+    '.less': 'lessc',
+    '.styl': 'stylus'
+  };
+
+  var log = options.verbose ? function(str) { console.log(str); }
+                            : function() {};
+
+  // Custom error also outputing StyleDocco and Node versions.
+  var SDError = function(msg, err) {
+    this.message = msg + '\n' + err.message + '\n' +
+      'StyleDocco v' + version +
+      ' running on Node ' + process.version + ' ' + process.platform;
+    if (options.verbose) {
+      this.message += '\nOptions: ' + JSON.stringify(options);
+    }
+  };
+  util.inherits(SDError, Error);
+
+  mkdirp(options.out);
+
+  // Fetch all static resources.
+  async.parallel({
+    template: function(cb) {
+      fs.readFile(resourcesDir + 'docs.jade', 'utf8', function(err, contents) {
+        if (err != null) return cb(err);
+        cb(null, jade.compile(contents));
+      });
+    },
+    docs: function(cb) {
+      async.parallel({
+        css: async.apply(fs.readFile, resourcesDir + 'docs.css', 'utf8'),
+        js: function(cb) {
+          async.parallel([
+            async.apply(fs.readFile, resourcesDir + 'docs.ui.js', 'utf8'),
+            async.apply(fs.readFile, resourcesDir + 'docs.previews.js', 'utf8')
+          ], function(err, res) {
+            if (err != null) return cb(err);
+            cb(null, res.join(''));
+          });
+        }
+      }, cb);
+    },
+    // Extra JavaScript and CSS files to include in previews.
+    previews: function(cb) {
+      fs.readFile(resourcesDir + 'previews.js', 'utf8', function(err, js) {
+        if (err != null) return cb(err);
+        var code = { js: js, css: '' };
+        var files = options.include.filter(function(file) {
+          return inArray(['.css', '.js'], path.extname(file));
+        });
+        async.filter(files, fs.exists, function(files) {
+          async.reduce(files, code, function(tot, cur, cb) {
+            fs.readFile(cur, 'utf8', function(err, contents) {
+              if (err != null) return cb(err);
+              tot[path.extname(cur).slice(1)] += contents;
+              cb(null, tot);
+            });
+          }, cb);
+        });
+      });
+    },
+    // Find input files.
+    files: function(cb) {
+      async.reduce(options['in'], [], function(all, cur, cb) {
+        getFiles(cur, function(err, files) {
+          if (err != null) return cb(err);
+          cb(null, all.concat(files));
+        });
+      }, function(err, files) {
+        if (err != null) return cb(err);
+        files = files.filter(function(file) {
+          // No hidden files
+          if (file.match(/(\/|^)\.[^\.\/]/)) return false;
+          // Only supported file types
+          if (!(path.extname(file) in fileTypes)) return false;
+          return true;
+        }).sort();
+        if (!files.length) cb(new Error(errorMessages.noFiles + ' in path "' + options['in'] + '"'));
+        cb(null, files);
+      });
+    },
+    // Look for a README file.
+    readme: function(cb) {
+      findFile(options.basePath, /^readme\.m(ark)?d(own)?/i, function(err, file) {
+        if (file != null &amp;&amp; err == null) return read(file);
+        findFile(process.cwd(), /^readme\.m(ark)?d(own)?/i, function(err, file) {
+          if (err != null) file = resourcesDir + 'README.md';
+          read(file);
+        });
+      });
+      var read = function(file) {
+        fs.readFile(file, 'utf8', function(err, content) {
+          if (err != null) cb(err);
+          cb(null, content);
+        });
+      };
+    }
+  }, function(err, resources) {
+    if (err != null) {
+      if (err.message.indexOf(errorMessages.noFiles) &gt; -1) {
+        console.error(err);
+        return;
+      } else {
+        throw new SDError('Could not process files.', err);
+      }
+    }
+    var menu = menuLinks(resources.files, options.basePath);
+    // Run files through preprocessor and StyleDocco parser.
+    async.map(resources.files, function(file, cb) { ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.styledocco.makeSections" id="apidoc.element.styledocco.makeSections">
+        function <span class="apidocSignatureSpan">styledocco.</span>makeSections
+        <span class="apidocSignatureSpan">(blocks)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">makeSections = function (blocks) {
+  return blocks
+    .map(function(block) {
+      // Run comments through marked.lexer to get Markdown tokens.
+      block.docs = marked.lexer(block.docs);
+      return block;
+    })
+    .map(function(block) {
+      // If we encounter code blocks in documentation, add preview HTML.
+      var newBlock = {
+        code: block.code,
+        docs: block.docs.reduce(function(tokens, token) {
+          if (token.type === 'code' &amp;&amp; (token.lang == null || token.lang === 'html')) {
+            token.type = 'html';
+            token.pre = true;
+            token.text = '&lt;textarea class="preview-code" spellcheck="false"&gt;' + htmlEntities(token.text) + '&lt;/textarea&gt;';
+          // Add permalink `id`s and some custom properties to headings.
+          } else if (token.type === 'heading') {
+            var slug = slugify(token.text);
+            token.type = 'html';
+            token._slug = slug;
+            token._origText = token.text;
+            // This token should start a new doc section
+            if (token.depth === 1) token._split = true;
+            token.text = '&lt;h' + token.depth + ' id="' + slug + '"&gt;' +
+                         token.text + '&lt;/h' + token.depth + '&gt;\n';
+          }
+          tokens.push(token);
+          return tokens;
+        }, [])
+      };
+      // Keep marked's custom links property on the docs array.
+      newBlock.docs.links = block.docs.links;
+      return newBlock;
+    }, [])
+    .reduce(function(sections, cur) {
+      // Split into sections with headings as delimiters.
+      var docs = cur.docs;
+      while (docs.length) {
+        // New or first section, add title/slug properties.
+        if (docs[0]._split || sections.length === 0) {
+          var title = docs[0]._origText;
+          var slug = docs[0]._slug;
+          sections.push({ docs: [ docs.shift() ], code: '',
+                          title: title, slug: slug });
+        } else {
+          // Add the documentation to the last section.
+          sections[sections.length-1].docs.push(docs.shift());
+        }
+        // Keep marked's custom links property on the docs arrays.
+        sections[sections.length-1].docs.links = docs.links;
+      }
+      // No docs in file, just add the CSS.
+      if (sections.length === 0) {
+        sections.push(cur);
+      // Add remaining code to the last section.
+      } else {
+        sections[sections.length-1].code += cur.code;
+      }
+      return sections;
+    }, [])
+    .map(function(section) {
+      // Run through marked parser to generate HTML.
+      return {
+        title: section.title ? section.title.trim() : '',
+        slug: section.slug || '',
+        docs: trimNewLines(marked.parser(section.docs)),
+        code: trimNewLines(section.code)
+      };
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  };
+});
+// Add readme with "fake" index path.
+htmlFiles.push({
+  path: path.join(options.basePath, 'index'),
+  html: resources.template({
+    title: '',
+    sections: styledocco.<span class="apidocCodeKeywordSpan">makeSections</span>([{ docs: resources.readme, code: '' }]),
+    project: { name: options.name, menu: menu },
+    resources: {
+      docs: { js: processJS(docsScript), css: processCSS(resources.docs.css) }
+    }
+  })
+});
+// Write files to the output dir.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.styledocco.separate" id="apidoc.element.styledocco.separate">
+        function <span class="apidocSignatureSpan">styledocco.</span>separate
+        <span class="apidocSignatureSpan">(css)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">separate = function (css) {
+  var lines = css.split('\n');
+  var docs, code, line, blocks = [];
+  while (lines.length) {
+    docs = code = '';
+    // First check for any single line comments.
+    while (lines.length &amp;&amp; checkType(lines[0]) === 'single') {
+      docs += formatDocs(lines.shift());
+    }
+    // A multi line comment starts here, add lines until comment ends.
+    if (lines.length &amp;&amp; checkType(lines[0]) === 'multistart') {
+      while (lines.length) {
+        line = lines.shift();
+        docs += formatDocs(line);
+        if (checkType(line) === 'multiend') break;
+      }
+    }
+    while (lines.length &amp;&amp; (checkType(lines[0]) === 'code' || checkType(lines[0]) === 'multiend')) {
+      code += formatCode(lines.shift());
+    }
+    blocks.push({ docs: docs, code: code });
+  }
+  return blocks;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.styledocco.cli" id="apidoc.module.styledocco.cli">module styledocco.cli</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.styledocco.cli.cli" id="apidoc.element.styledocco.cli.cli">
+        function <span class="apidocSignatureSpan">styledocco.</span>cli
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cli = function (options) {
+
+  var errorMessages = { noFiles: 'No css files found' };
+  var resourcesDir = __dirname + '/share/';
+
+  // Filetypes and matching preprocessor binaries.
+  var fileTypes = {
+    '.css': null,
+    '.sass': 'sass',
+    '.scss': 'scss',
+    '.less': 'lessc',
+    '.styl': 'stylus'
+  };
+
+  var log = options.verbose ? function(str) { console.log(str); }
+                            : function() {};
+
+  // Custom error also outputing StyleDocco and Node versions.
+  var SDError = function(msg, err) {
+    this.message = msg + '\n' + err.message + '\n' +
+      'StyleDocco v' + version +
+      ' running on Node ' + process.version + ' ' + process.platform;
+    if (options.verbose) {
+      this.message += '\nOptions: ' + JSON.stringify(options);
+    }
+  };
+  util.inherits(SDError, Error);
+
+  mkdirp(options.out);
+
+  // Fetch all static resources.
+  async.parallel({
+    template: function(cb) {
+      fs.readFile(resourcesDir + 'docs.jade', 'utf8', function(err, contents) {
+        if (err != null) return cb(err);
+        cb(null, jade.compile(contents));
+      });
+    },
+    docs: function(cb) {
+      async.parallel({
+        css: async.apply(fs.readFile, resourcesDir + 'docs.css', 'utf8'),
+        js: function(cb) {
+          async.parallel([
+            async.apply(fs.readFile, resourcesDir + 'docs.ui.js', 'utf8'),
+            async.apply(fs.readFile, resourcesDir + 'docs.previews.js', 'utf8')
+          ], function(err, res) {
+            if (err != null) return cb(err);
+            cb(null, res.join(''));
+          });
+        }
+      }, cb);
+    },
+    // Extra JavaScript and CSS files to include in previews.
+    previews: function(cb) {
+      fs.readFile(resourcesDir + 'previews.js', 'utf8', function(err, js) {
+        if (err != null) return cb(err);
+        var code = { js: js, css: '' };
+        var files = options.include.filter(function(file) {
+          return inArray(['.css', '.js'], path.extname(file));
+        });
+        async.filter(files, fs.exists, function(files) {
+          async.reduce(files, code, function(tot, cur, cb) {
+            fs.readFile(cur, 'utf8', function(err, contents) {
+              if (err != null) return cb(err);
+              tot[path.extname(cur).slice(1)] += contents;
+              cb(null, tot);
+            });
+          }, cb);
+        });
+      });
+    },
+    // Find input files.
+    files: function(cb) {
+      async.reduce(options['in'], [], function(all, cur, cb) {
+        getFiles(cur, function(err, files) {
+          if (err != null) return cb(err);
+          cb(null, all.concat(files));
+        });
+      }, function(err, files) {
+        if (err != null) return cb(err);
+        files = files.filter(function(file) {
+          // No hidden files
+          if (file.match(/(\/|^)\.[^\.\/]/)) return false;
+          // Only supported file types
+          if (!(path.extname(file) in fileTypes)) return false;
+          return true;
+        }).sort();
+        if (!files.length) cb(new Error(errorMessages.noFiles + ' in path "' + options['in'] + '"'));
+        cb(null, files);
+      });
+    },
+    // Look for a README file.
+    readme: function(cb) {
+      findFile(options.basePath, /^readme\.m(ark)?d(own)?/i, function(err, file) {
+        if (file != null &amp;&amp; err == null) return read(file);
+        findFile(process.cwd(), /^readme\.m(ark)?d(own)?/i, function(err, file) {
+          if (err != null) file = resourcesDir + 'README.md';
+          read(file);
+        });
+      });
+      var read = function(file) {
+        fs.readFile(file, 'utf8', function(err, content) {
+          if (err != null) cb(err);
+          cb(null, content);
+        });
+      };
+    }
+  }, function(err, resources) {
+    if (err != null) {
+      if (err.message.indexOf(errorMessages.noFiles) &gt; -1) {
+        console.error(err);
+        return;
+      } else {
+        throw new SDError('Could not process files.', err);
+      }
+    }
+    var menu = menuLinks(resources.files, options.basePath);
+    // Run files through preprocessor and StyleDocco parser.
+    async.map(resources.files, function(file, cb) { ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.styledocco.cli.getFiles" id="apidoc.element.styledocco.cli.getFiles">
+        function <span class="apidocSignatureSpan">styledocco.cli.</span>getFiles
+        <span class="apidocSignatureSpan">(inPath, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFiles = function (inPath, cb) {
+  fs.stat(inPath, function(err, stat) {
+    if (err != null) return cb(err);
+    if (stat.isFile()) {
+      cb(null, [ inPath ]);
+    } else {
+      var finder = findit(inPath);
+      var files = [];
+      finder.on('file', function(file) { files.push(file); });
+      finder.on('end', function() { cb(null, files); });
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.styledocco.cli.htmlFilename" id="apidoc.element.styledocco.cli.htmlFilename">
+        function <span class="apidocSignatureSpan">styledocco.cli.</span>htmlFilename
+        <span class="apidocSignatureSpan">(file, basePath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">htmlFilename = function (file, basePath) {
+  return path.join(
+    path.dirname(path.relative(basePath, file) || path.basename(basePath)),
+    baseFilename(file) + '.html'
+  ).replace(/[\\/]/g, '-');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.styledocco.cli.menuLinks" id="apidoc.element.styledocco.cli.menuLinks">
+        function <span class="apidocSignatureSpan">styledocco.cli.</span>menuLinks
+        <span class="apidocSignatureSpan">(files, basePath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">menuLinks = function (files, basePath) {
+  return files.map(function(file) {
+    var parts = path.dirname(file).split('/');
+    parts.shift(); // Remove base directory name
+    return {
+      name: baseFilename(file),
+      href: htmlFilename(file, basePath),
+      directory: parts[parts.length-1] || './'
+    };
+  })
+  .reduce(function(links, link) {
+    if (links[link.directory] != null) {
+      links[link.directory].push(link);
+    } else {
+      links[link.directory] = [ link ];
+    }
+    return links;
+  }, {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.styledocco.cli.preprocess" id="apidoc.element.styledocco.cli.preprocess">
+        function <span class="apidocSignatureSpan">styledocco.cli.</span>preprocess
+        <span class="apidocSignatureSpan">(file, pp, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">preprocess = function (file, pp, options, cb) {
+  // stdin would have been nice here, but not all preprocessors (less)
+  // accepts that, so we need to read the file both here and for the parser.
+  // Don't process SASS partials.
+  if (file.match(/(^|\/)_.*\.s(c|a)ss$/) != null) {
+    process.nextTick(function() { cb(null, ''); });
+  } else if (pp != null) {
+    pp += ' ';
+    pp += file;
+    pp = pp.split(' ');
+    pp = spawn(pp.shift(), pp);
+
+    pp.stderr.setEncoding('utf8');
+    pp.stdout.setEncoding('utf8');
+
+    var stdout = '';
+
+    pp.on('error', function(err) {
+      if (err != null &amp;&amp; options.verbose) console.error(err.message);
+    });
+
+    pp.on('close', function() {
+      cb(null, stdout);
+    });
+
+    pp.stderr.on('data', function(data) {
+      if (data.length &amp;&amp; options.verbose) console.error(data);
+    });
+
+    pp.stdout.on('data', function(data) {
+      stdout += data;
+    });
+  } else {
+    fs.readFile(file, 'utf8', cb);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.styledocco.cli.urlsRelative" id="apidoc.element.styledocco.cli.urlsRelative">
+        function <span class="apidocSignatureSpan">styledocco.cli.</span>urlsRelative
+        <span class="apidocSignatureSpan">(css, path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">urlsRelative = function (css, path) {
+    if (isString(css) &amp;&amp; isString(path)) {
+        path = path.indexOf('/', path.length -1) &gt; -1? path : path + '/';
+        var regex = /(url\(["']?)(?!https?:|data:)([^/'"][\w/.]*)/gm;
+        return css.replace(regex, "$1" + path + "$2");
+    } else {
+        throw new Error('1st and 2nd args must be strings.');
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.styledocco.styledocco" id="apidoc.module.styledocco.styledocco">module styledocco.styledocco</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.styledocco.styledocco.styledocco" id="apidoc.element.styledocco.styledocco.styledocco">
+        function <span class="apidocSignatureSpan">styledocco.</span>styledocco
+        <span class="apidocSignatureSpan">(css)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">styledocco = function (css) {
+  return makeSections(separate(css));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.styledocco.styledocco.makeSections" id="apidoc.element.styledocco.styledocco.makeSections">
+        function <span class="apidocSignatureSpan">styledocco.styledocco.</span>makeSections
+        <span class="apidocSignatureSpan">(blocks)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">makeSections = function (blocks) {
+  return blocks
+    .map(function(block) {
+      // Run comments through marked.lexer to get Markdown tokens.
+      block.docs = marked.lexer(block.docs);
+      return block;
+    })
+    .map(function(block) {
+      // If we encounter code blocks in documentation, add preview HTML.
+      var newBlock = {
+        code: block.code,
+        docs: block.docs.reduce(function(tokens, token) {
+          if (token.type === 'code' &amp;&amp; (token.lang == null || token.lang === 'html')) {
+            token.type = 'html';
+            token.pre = true;
+            token.text = '&lt;textarea class="preview-code" spellcheck="false"&gt;' + htmlEntities(token.text) + '&lt;/textarea&gt;';
+          // Add permalink `id`s and some custom properties to headings.
+          } else if (token.type === 'heading') {
+            var slug = slugify(token.text);
+            token.type = 'html';
+            token._slug = slug;
+            token._origText = token.text;
+            // This token should start a new doc section
+            if (token.depth === 1) token._split = true;
+            token.text = '&lt;h' + token.depth + ' id="' + slug + '"&gt;' +
+                         token.text + '&lt;/h' + token.depth + '&gt;\n';
+          }
+          tokens.push(token);
+          return tokens;
+        }, [])
+      };
+      // Keep marked's custom links property on the docs array.
+      newBlock.docs.links = block.docs.links;
+      return newBlock;
+    }, [])
+    .reduce(function(sections, cur) {
+      // Split into sections with headings as delimiters.
+      var docs = cur.docs;
+      while (docs.length) {
+        // New or first section, add title/slug properties.
+        if (docs[0]._split || sections.length === 0) {
+          var title = docs[0]._origText;
+          var slug = docs[0]._slug;
+          sections.push({ docs: [ docs.shift() ], code: '',
+                          title: title, slug: slug });
+        } else {
+          // Add the documentation to the last section.
+          sections[sections.length-1].docs.push(docs.shift());
+        }
+        // Keep marked's custom links property on the docs arrays.
+        sections[sections.length-1].docs.links = docs.links;
+      }
+      // No docs in file, just add the CSS.
+      if (sections.length === 0) {
+        sections.push(cur);
+      // Add remaining code to the last section.
+      } else {
+        sections[sections.length-1].code += cur.code;
+      }
+      return sections;
+    }, [])
+    .map(function(section) {
+      // Run through marked parser to generate HTML.
+      return {
+        title: section.title ? section.title.trim() : '',
+        slug: section.slug || '',
+        docs: trimNewLines(marked.parser(section.docs)),
+        code: trimNewLines(section.code)
+      };
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  };
+});
+// Add readme with "fake" index path.
+htmlFiles.push({
+  path: path.join(options.basePath, 'index'),
+  html: resources.template({
+    title: '',
+    sections: styledocco.<span class="apidocCodeKeywordSpan">makeSections</span>([{ docs: resources.readme, code: '' }]),
+    project: { name: options.name, menu: menu },
+    resources: {
+      docs: { js: processJS(docsScript), css: processCSS(resources.docs.css) }
+    }
+  })
+});
+// Write files to the output dir.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.styledocco.styledocco.separate" id="apidoc.element.styledocco.styledocco.separate">
+        function <span class="apidocSignatureSpan">styledocco.styledocco.</span>separate
+        <span class="apidocSignatureSpan">(css)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">separate = function (css) {
+  var lines = css.split('\n');
+  var docs, code, line, blocks = [];
+  while (lines.length) {
+    docs = code = '';
+    // First check for any single line comments.
+    while (lines.length &amp;&amp; checkType(lines[0]) === 'single') {
+      docs += formatDocs(lines.shift());
+    }
+    // A multi line comment starts here, add lines until comment ends.
+    if (lines.length &amp;&amp; checkType(lines[0]) === 'multistart') {
+      while (lines.length) {
+        line = lines.shift();
+        docs += formatDocs(line);
+        if (checkType(line) === 'multiend') break;
+      }
+    }
+    while (lines.length &amp;&amp; (checkType(lines[0]) === 'code' || checkType(lines[0]) === 'multiend')) {
+      code += formatCode(lines.shift());
+    }
+    blocks.push({ docs: docs, code: code });
+  }
+  return blocks;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
